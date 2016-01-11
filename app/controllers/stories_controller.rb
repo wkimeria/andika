@@ -24,6 +24,10 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
+    puts "------------------------------------------------------"
+    puts story_params
+    puts params
+    puts "------------------------------------------------------"
     @story = Story.new(story_params)
 
     respond_to do |format|

@@ -27,13 +27,15 @@ ActiveRecord::Schema.define(version: 20160110041058) do
   end
 
   create_table "stories", force: :cascade do |t|
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.integer  "phrase_length", default: 140,   null: false
-    t.boolean  "started",       default: false, null: false
-    t.boolean  "completed",     default: false, null: false
-    t.integer  "length",        default: 20,    null: false
-    t.string   "uri",                           null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "participant_id"
+    t.integer  "phrase_length",  default: 140,   null: false
+    t.integer  "quorum",                         null: false
+    t.boolean  "started",        default: false, null: false
+    t.boolean  "completed",      default: false, null: false
+    t.integer  "length",         default: 20,    null: false
+    t.string   "uri",                            null: false
   end
 
   create_table "story_participants", force: :cascade do |t|
