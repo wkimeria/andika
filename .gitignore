@@ -1,3 +1,5 @@
-HelloSpark.iml
+*.iml
+*.ipr
+*.iws
 */target/*
 
